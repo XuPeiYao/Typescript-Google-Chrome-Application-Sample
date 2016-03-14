@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html ng-app="application" ng-controller="mainWindow">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <title>mainWindow</title>
+    
+    <link href="../libraries/angular-material/angular-material.min.css" rel="stylesheet" />
+    <link href="../libraries/material-design-icons/material-icons.css" rel="stylesheet" />
+    <link href="../styles/main.css" rel="stylesheet" />
+
+    <script src="../libraries/MediaGet.js"></script>
+    <script src="../libraries/nativeExtensions.js"></script>
+
+    <script src="../libraries/angularjs/angular.min.js"></script>
+    <script src="../libraries/angularjs/angular-animate.min.js"></script>
+    <script src="../libraries/angularjs/angular-aria.min.js"></script>
+    <script src="../libraries/angularjs/angular-messages.min.js"></script>
+    <script src="../libraries/angular-material/angular-material.min.js"></script>
+</head>
+<body>
+    <md-toolbar class="md-menu-toolbar draggable windowTitleBar">
+        <div layout="row">
+            <md-toolbar-filler layout layout-align="center center">
+                <i class="material-icons">apps</i>
+            </md-toolbar-filler>
+            <div>
+                <h2 class="md-toolbar-tools windowTitle">{{title}}</h2>
+                <md-menu-bar class="noDraggable">
+                    <md-menu>
+                        <button ng-click="$mdOpenMenu()">檔案</button>
+                        <md-menu-content>
+                            <md-menu-item>
+                                <md-menu>
+                                    <md-button ng-click="$mdOpenMenu()">新增</md-button>
+                                    <md-menu-content>
+                                        <md-menu-item><md-button>新檔案</md-button></md-menu-item>
+                                        <md-menu-item><md-button>新專案</md-button></md-menu-item>
+                                    </md-menu-content>
+                                </md-menu>
+                            </md-menu-item>
+                            <md-menu-item><md-button>開啟</md-button></md-menu-item>
+                            <md-menu-divider></md-menu-divider>
+                            <md-menu-item>
+                                <md-button>
+                                    列印
+                                    <span class="md-alt-text">{{ 'M-P' | keyboardShortcut }}</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-divider></md-menu-divider>
+                            <md-menu-item>
+                                <md-button>
+                                    結束
+                                    <span class="md-alt-text">{{ 'M-X' | keyboardShortcut }}</span>
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-bar>
+            </div>
+        </div>
+        <div class="windowControls noDraggable">
+            <md-button id="minimize" ng-click="minimize()"><i class="material-icons">remove</i></md-button>
+            <md-button id="maximize" ng-hide="isMaximize" ng-click="maximize()"><i class="material-icons">crop_square</i></md-button>
+            <md-button id="restore" ng-show="isMaximize" ng-click="restore()"><i class="material-icons">flip_to_front</i></md-button>
+            <md-button id="close" ng-click="close()"><i class="material-icons">close</i></md-button>
+        </div>
+    </md-toolbar>
+    <content>
+        測試用專案
+    </content>
+    <script src="../scripts/mainWindow.js"></script>
+</body>
+</html>

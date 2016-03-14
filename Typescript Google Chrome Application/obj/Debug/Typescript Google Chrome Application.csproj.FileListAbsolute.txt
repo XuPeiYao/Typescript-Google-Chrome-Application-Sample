@@ -1,0 +1,5 @@
+C:\Users\XuPeiYao\Documents\GitHub\Typescript Google Chrome Application\Typescript Google Chrome Application\bin\Typescript Google Chrome Application.dll
+C:\Users\XuPeiYao\Documents\GitHub\Typescript Google Chrome Application\Typescript Google Chrome Application\bin\Typescript Google Chrome Application.pdb
+C:\Users\XuPeiYao\Documents\GitHub\Typescript Google Chrome Application\Typescript Google Chrome Application\obj\Debug\Typescript Google Chrome Application.csprojResolveAssemblyReference.cache
+C:\Users\XuPeiYao\Documents\GitHub\Typescript Google Chrome Application\Typescript Google Chrome Application\obj\Debug\Typescript Google Chrome Application.dll
+C:\Users\XuPeiYao\Documents\GitHub\Typescript Google Chrome Application\Typescript Google Chrome Application\obj\Debug\Typescript Google Chrome Application.pdb
